@@ -239,7 +239,7 @@ class PulidFluxEvaClipLoader:
     def load_eva_clip(self):
         from .eva_clip.factory import create_model_and_transforms
 
-        model, _, _ = create_model_and_transforms('EVA02-CLIP-L-14-336', 'eva_clip', force_custom_clip=True, cache_dir=os.path.join(MODELS_DIR, 'QuanSun/EVA-CLIP'))
+        model, _, _ = create_model_and_transforms('EVA02-CLIP-L-14-336', MODELS_DIR + '/QuanSun/EVA-CLIP/EVA02_CLIP_L_336_psz14_s6B.pt', force_custom_clip=True)
 
         model = model.visual
 
